@@ -60,6 +60,7 @@ absolute_häufigkeit_boden <- abs_density(pix_soil_slide, pix_slide)
 hangrutschungsdichte_boden <- slide_density(pix_soil_slide, all_class)
 
 # Barplot
+x11()
 plot_barplot(absolute_häufigkeit = absolute_häufigkeit_boden, 
              hangrutschungsdichte = hangrutschungsdichte_boden,
              names = soil)
@@ -70,6 +71,7 @@ absolute_häufigkeit_boden_noZero <- absolute_häufigkeit_boden[-c(zero)]
 hangrutschungsdichte_boden_noZero <- hangrutschungsdichte_boden[-c(zero)]
 soil_noZero <- soil[-c(zero)]
 
+x11()
 plot_barplot(absolute_häufigkeit = absolute_häufigkeit_boden_noZero, 
              hangrutschungsdichte = hangrutschungsdichte_boden_noZero,
              names = soil_noZero)
